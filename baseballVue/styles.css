@@ -1,0 +1,20 @@
+
+.playerInfo {
+   background-color: #2c3e50;
+   text-align: center;
+   width: 50%;
+   display: block;
+   margin: auto;
+   color:white;
+   border-radius: 5px;
+}
+
+.playerInfo img{
+    max-width: 50%;
+    border-radius: 5px;
+}
+
+myTitle {
+    background-color: #2c3e50;
+    font-size: 500px;
+}
