@@ -83,10 +83,10 @@ const baseballPlayers = [
 // averageList(baseballPlayers)
 //   // 5) Use map or filter to return an array of only the baseball players first names
 ///THIS ONE WORKS!!! 
-const firstNames = baseballPlayers.map(firstName =>{
-     return firstName.name.split(' ')[0]
-  })
-  console.log(firstNames)
+// const firstNames = baseballPlayers.map(firstName =>{
+//      return firstName.name.split(' ')[0]
+//   })
+//   console.log(firstNames)
 
 // //   // 6) Use filter or map to return an array of Cleveland Indian Players with HRs greater than 575
 

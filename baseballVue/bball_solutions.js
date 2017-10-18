@@ -88,8 +88,8 @@ const baseballPlayers = [
   //  "Hank Aaron played for the Braves and had 755 homeruns",
   //  "Babe Ruth played for the Yankees and had 714 homeruns",]
 
-  const newSentences = baseballPlayers.map((names) => {
-    return ` ${names.name} played for ${names.team.split(' ')[1]} and had ${names.HR} homeruns ` 
-})
+//   const newSentences = baseballPlayers.map((names) => {
+//     return ` ${names.name} played for ${names.team.split(' ')[1]} and had ${names.HR} homeruns ` 
+// })
 
-console.log(newSentences)
+// console.log(newSentences)
