@@ -24,94 +24,72 @@ const baseballPlayers = [
   
   // 1) Use map or filter to return an array of baseball player names.
   // examples -> ["Barry Bonds", "Hank Aaron", "Babe Ruth", etc..]
-
-  ////THIS ONE WORKS!!!
-//   const playerNames = (arr) => {
-//       for (let i = 0; i < arr.length; i += 1) {
-//           console.log(arr[i].name)
-//       }
-//   }
-//   //playerNames(baseballPlayers)
-
+  
 //   const printPlayersMap = baseballPlayers.map(function(item){
 //       return item.name
 //   })
 //  console.log(printPlayersMap)
 
   // 2) User map or filter to return an array of only players that play for the Cleveland Indians
-//  ////THIS ONE DOES WORK ON THE MAP FUNCTION 
-//   const playerNamesS = (arr) => {
-//       let newArr = []
-
-//       for (let i = 0; i < arr.length; i += 1){
-//         if(arr[i].team === 'Cleveland Indians')
-//         newArr.push(arr[i].team === 'Cleveland Indians');
-//       }
-//       return teamIndians.name
-//   }
-//  // console.log(playerNamesS(baseballPlayers))
-// //   //////////////
-// const clevelandIndians = baseballPlayers.map(function(item) {
-//     return item.team === 'Cleveland Indians' && item.name
-// })
-// console.log(clevelandIndians)
-
-//   // 3) Use map or filter to return an array full of objects with only the players name and team.
-//   //  examples -> [ { name: "Barry Bonds", team: "San Francisco Giants" }, { name: "Hank Aaron", team: "Atlanta Braves"}, etc..]
-//   const nameAndTeam = (arr) => {
-     let newArr = []
-
-//      for (let i = 0; i < arr.length; i += 1){
-//          newArr.push({ name: arr[i] });
-//      }
-//    return newArr
-//  } 
-// //console.log(nameAndTeam(baseballPlayers));
-
-//   const nameAndTeamMap = baseballPlayers.filter(function(item){
-//     return item.name && item.team
+  
+//   const printClevelandFilter = baseballPlayers.filter(player) => {
+//     return player.team === 'Cleveland Indians'
 //   })
-// console.log(baseballPlayers)
-//  // 4) Create a function that returns the average of all players HR (for loop)
-//   ///THIS ONE WORKS!!
- const averageList = (arr) => {
-      for(i=0; i < arr.length; i += 1){
-          if (arr[i].HR > 570 && arr[i].HR < 580)
-          console.log(arr[i])
-      }
-  }
-// averageList(baseballPlayers)
-//   // 5) Use map or filter to return an array of only the baseball players first names
-///THIS ONE WORKS!!! 
-const firstNames = baseballPlayers.map(firstName =>{
-     return firstName.name.split(' ')[0]
-  })
-  console.log(firstNames)
+ //console.log(printClevelandFilter)
 
-// //   // 6) Use filter or map to return an array of Cleveland Indian Players with HRs greater than 575
-
-// ///THIS ONE DOES WORK
-  // const clevelandIndians = baseballPlayers.map(function(item) {
-  //     return item.team === "Cleveland Indians" && item.HR > 575 && item.name
-  // })
-
-  //  console.log(clevelandIndians)
-
-// //   // 7) Use Filter & Map to return an array of just the Names of the Cleveland Indian Players with HR's greater than 575.
-          
-//         const clevelandIndians = baseballPlayers.map(function(item) {
-//           return item.team === "Cleveland Indians" && item.HR > 575 && item.name
-//       })
-    
-//        console.log(clevelandIndians)
-    
-// //   // 8) Use Filter or Map to return an array full of sentences that match the following examples:
-// //   // examples -> [
-// //   //  "Barry Bonds played for the Giants and had 763 homeruns", 
-// //   //  "Hank Aaron played for the Braves and had 755 homeruns",
-// //   //  "Babe Ruth played for the Yankees and had 714 homeruns",]
+  // 3) Use map or filter to return an array full of objects with only the players name and team.
+  //  examples -> [ { name: "Barry Bonds", team: "San Francisco Giants" }, { name: "Hank Aaron", team: "Atlanta Braves"}, etc..]
+  
+//  const playerInfo = baseballPlayers.map((player) => {
+//      return player { name: player.name, team: player.team}
+//  })
+// console.log(playerInfo)
+  // 4) Create a function that returns the average of all players HR (for loop)
  
-// const newSentences = baseballPlayers.map(function(item){
-//     return item.name && item.team && item.HR
+// const playerAverage = (arr) => {
+//     let totalRuns = 0
+//     for(let i = 0; i < arr.length; i++) {
+//         totalRuns += arr[i].HR
+//     }
+//     return totalRuns / arr.length
+// }
+
+// // console.log(playerAverage(baseballPlayers))
+//   // 5) Use map or filter to return an array of only the baseball players first names
+  
+
+//   const firstNames = baseballPlayers.map(firstName =>{
+//     return firstName.name.split(' ')[0]
+//  })
+//  //console.log(firstNames)
+
+
+  // 6) Use filter or map to return an array of Cleveland Indian Players with HRs greater than 575
+  
+//   const clevelandIndians = baseballPlayers.filter(function(item) {
+//     return item.team === "Cleveland Indians" && item.HR > 575 && item.name
 // })
-// console.log(` ${name} played for ${team} and had ${HR} homeruns `)
+
+//  console.log(clevelandIndians)
+
+
+  // 7) Use Filter & Map to return an array of just the Names of the Cleveland Indian Players with HR's greater than 575.
+  
+// const clevelandPlayer = baseballPlayers.filter(player => {
+//     return player.team === 'Cleveland Indians' && player.HR >575
+
+// }).map( i => {
+//   return i.name
+// })
+// console.log(clevelandPlayer)
+  // 8) Use Filter or Map to return an array full of sentences that match the following examples:
+  // examples -> [
+  //  "Barry Bonds played for the Giants and had 763 homeruns", 
+  //  "Hank Aaron played for the Braves and had 755 homeruns",
+  //  "Babe Ruth played for the Yankees and had 714 homeruns",]
+
+  const newSentences = baseballPlayers.map((names) => {
+    return ` ${names.name} played for ${names.team.split(' ')[1]} and had ${names.HR} homeruns ` 
+})
+
+console.log(newSentences)
