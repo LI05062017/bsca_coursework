@@ -74,22 +74,24 @@ addBookToCart("The Wind-Up Bird Chronicles")
 addBookToCart("Antifragile")
 addBookToCart("The House of the Scorpion")
 
-const totalPrice = (arr) => {
-  let totalPrice = 0
-  for(i=0; i < arr.length; i += 1) {
-     totalPrice += arr[i].price
-  }
- return totalPrice
-}
+// const totalPrice = (arr) => {
+//   let totalPrice = 0
+//   for(i=0; i < arr.length; i += 1) {
+//      totalPrice += arr[i].price
+//   }
+//  return totalPrice
+// }
  
-const printInfoToCustomer =(arr) =>{
-    for( let i = 0; i < arr.length; i +=1 ){
-        console.log (`${arr[i].name} is by ${arr[i].author} and costs ${arr[i].price}`)
+// const printInfoToCustomer =(arr) =>{
+//     const books = arr.map((book) => {
+//         return `${book.name}` is by ${book.author}`
+//     }
+//     return
 
-}
-console.log(totalPrice(`Total Price ${totalPrice(shoppingCart)}`)
-}
+// }
+// console.log(totalPrice(`Total Price ${totalPrice(shoppingCart)}`)
+// }
 
-printInfoToCustomer(shoppingCart)
+// printInfoToCustomer(shoppingCart)
 
 
