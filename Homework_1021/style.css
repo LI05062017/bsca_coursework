@@ -1,0 +1,50 @@
+.travel-container {
+    display: flex;
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    align-items: center;
+    border: 2px solid black;
+    flex-wrap:wrap;
+    border: 2px solid black;
+
+}
+
+.destination-card{
+    font-size: 17px;
+    font-family: 'Amaranth', sans-serif;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: calc(33% - 10px);
+    margin-left: calc(33% - 10px);
+    margin-right: calc(33% - 10px);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: .5em;
+}
+
+.myJumbo {
+    text-align: center;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    font-family: 'Pacifico', cursive;
+    font-size: 100px;
+    border: 2px solid black;
+}
+
+.title{
+    font-size:60px;
+    letter-spacing:0.1em;
+}
+
+.placeName {
+    font-size:30px;
+    letter-spacing:0.1em;
+    font-family: 'Playfair Display SC', serif;
+    text-decoration: underline;
+}
+
+.activites {
+    font-size: 20px;
+    font-family: 'Amaranth', sans-serif;
+    
+}
